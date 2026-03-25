@@ -35,7 +35,7 @@
 					<a href="/mvc/update.product?id=<%= productVO.getId() %>">수정하기</a>
 				</div>
 				<div>
-					<a href="/mvc/delete.product?id=<%= productVO.getId() %>">삭제하기</a>
+					<a href="/mvc/delete-ok.product?id=<%= productVO.getId() %>">삭제하기</a>
 				</div>
 			<%
 		} else {

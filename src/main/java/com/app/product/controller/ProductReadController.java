@@ -22,11 +22,9 @@ public class ProductReadController implements Action {
 		Long id = Long.parseLong(req.getParameter("id"));
 		ProductDAO productDAO = new ProductDAO();
 		ProductVO productVO = new ProductVO();
-		productVO = productDAO.select(id);
 		
-		Optional<ProductVO> foundProduct = Optional.ofNullable(productDAO.select(id));
-		
-		ProductVO product = foundProduct.orElseThrow(ProductNotFoundException::new);
+//		ProductVO product = foundProduct.orElseThrow(ProductNotFoundException::new);
+		ProductVO product = productDAO.select(id).orElseThrow(ProductNotFoundException::new);
 		
 		req.setAttribute("product", product);
 		result.setPath("/read.jsp");

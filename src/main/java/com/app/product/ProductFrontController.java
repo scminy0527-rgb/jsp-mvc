@@ -8,9 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.product.controller.ProductDeleteOkController;
 import com.app.product.controller.ProductListController;
 import com.app.product.controller.ProductReadController;
 import com.app.product.controller.ProductUpdateController;
+import com.app.product.controller.ProductUpdateOkController;
 import com.app.product.controller.ProductWriteController;
 import com.app.product.controller.ProductWriteOkController;
 
@@ -37,8 +39,9 @@ public class ProductFrontController extends HttpServlet {
 		} else if (target.equals("update")) {
 			result = new ProductUpdateController().excute(req, resp);
 		} else if (target.equals("update-ok")) {
+			result = new ProductUpdateOkController().excute(req, resp);
 		} else if (target.equals("delete-ok")) {
-			
+			result = new ProductDeleteOkController().excute(req, resp);
 		} else {
 //			not found
 		}
