@@ -26,7 +26,7 @@ public class PostListController implements Action {
 //		어쨋든 사람이 호출을 한 uri 와 최종적으로 갈 곳이 동일하기에 foward, req 살아있음
 		req.setAttribute("postList", postList);
 		
-		result.setPath("/post-list.jsp");
+		result.setPath("/new-post-list.jsp");
 		return result;
 	}
 }

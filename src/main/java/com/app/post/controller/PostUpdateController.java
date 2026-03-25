@@ -26,7 +26,7 @@ public class PostUpdateController implements Action {
 		req.setAttribute("post", postVO);
 		
 //		result 설정
-		result.setPath("/post-update.jsp");
+		result.setPath("/new-post-update.jsp");
 		
 		return result;
 	}

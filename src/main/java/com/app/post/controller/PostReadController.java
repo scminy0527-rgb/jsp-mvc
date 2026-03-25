@@ -21,10 +21,16 @@ public class PostReadController implements Action {
 		Result result = new Result();
 		PostDAO postDAO = new PostDAO();
 		Long id = Long.parseLong(req.getParameter("id"));
+		
+		
 		PostVO postVO = postDAO.select(id).orElseThrow(PostNotFoundException::new);
+		if (postVO == null) {
+			resp.sendRedirect("/mvc/list.post");
+		    return result; // 여기서 반드시 return
+		}
 		req.setAttribute("post", postVO);
 		
-		result.setPath("/post-read.jsp");
+		result.setPath("/new-post-read.jsp");
 		
 		return result;
 	}
