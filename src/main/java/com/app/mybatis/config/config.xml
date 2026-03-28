@@ -9,6 +9,7 @@
    <typeAliases>
    		<typeAlias type="com.app.vo.ProductVO" alias="ProductVO"/>
    		<typeAlias type="com.app.vo.PostVO" alias="PostVO"/>
+   		<typeAlias type="com.app.vo.MemberVO" alias="MemberVO"/>
    </typeAliases>
    
    <environments default="oracle">
@@ -26,5 +27,6 @@
     <mappers>
     	<mapper resource="com/app/mybatis/mapper/productMapper.xml" />
     	<mapper resource="com/app/mybatis/mapper/postMapper.xml" />
+    	<mapper resource="com/app/mybatis/mapper/memberMapper.xml" />
     </mappers>
  </configuration>

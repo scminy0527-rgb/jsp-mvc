@@ -26,5 +26,4 @@ public class PostDeleteOkController implements Action {
 		
 		return result;
 	}
-
 }

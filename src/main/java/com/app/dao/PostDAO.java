@@ -9,7 +9,7 @@ import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.PostVO;
 
 public class PostDAO {
-	SqlSession sqlSession;
+	private SqlSession sqlSession;
 	
 	public PostDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);

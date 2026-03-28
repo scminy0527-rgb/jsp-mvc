@@ -23,8 +23,8 @@ public class PostFrontController extends HttpServlet {
 		resp.setContentType("text/html; charset=UTF-8");
 		
 		String target = req.getRequestURI().split("\\.")[0].replace(req.getContextPath() + "/", "");
-		System.out.println("경로 타겟");
-		System.out.println(target);
+//		System.out.println("경로 타겟");
+//		System.out.println(target);
 		Result result = null;
 		
 		if(target.equals("write")) {

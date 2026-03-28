@@ -7,10 +7,10 @@ public class PostVO {
 	private Long id;
 	private String postTitle;
 	private String postContent;
-	private Timestamp postCreateAt;
+	private String postCreateAt;
 	
 	public PostVO() {;}
-	public PostVO(Long id, String postTitle, String postContent, Timestamp postCreateAt) {
+	public PostVO(Long id, String postTitle, String postContent, String postCreateAt) {
 		this.id = id;
 		this.postTitle = postTitle;
 		this.postContent = postContent;
@@ -34,10 +34,10 @@ public class PostVO {
 	public void setPostContent(String postContent) {
 		this.postContent = postContent;
 	}
-	public Timestamp getPostCreateAt() {
+	public String getPostCreateAt() {
 		return postCreateAt;
 	}
-	public void setPostCreateAt(Timestamp postCreateAt) {
+	public void setPostCreateAt(String postCreateAt) {
 		this.postCreateAt = postCreateAt;
 	}
 	@Override
@@ -60,7 +60,4 @@ public class PostVO {
 		PostVO other = (PostVO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
 }

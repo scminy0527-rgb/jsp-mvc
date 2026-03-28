@@ -31,4 +31,15 @@
   	<url-pattern>*.post</url-pattern>
   </servlet-mapping>
   
+  <!-- 멤버 서블릿 -->
+  <servlet>
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<servlet-class>com.app.member.MemberFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<url-pattern>*.member</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

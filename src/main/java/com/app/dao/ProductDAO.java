@@ -9,7 +9,7 @@ import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.ProductVO;
 
 public class ProductDAO {
-	public SqlSession sqlSession;
+	private SqlSession sqlSession;
 	
 	public ProductDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);

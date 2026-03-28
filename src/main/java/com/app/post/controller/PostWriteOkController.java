@@ -25,10 +25,10 @@ public class PostWriteOkController implements Action {
 		postDAO.insert(postVO);
 		
 //		결과 반환, 어디로 어떻게
-		result.setPath("/mvc/list.post");
+//		req.setAttribute("id", postVO.getId());
+		result.setPath("/mvc/read.post?id="+postVO.getId());
 		result.setRedirect(true);
 		
 		return result;
 	}
-
 }
