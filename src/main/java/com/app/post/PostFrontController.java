@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.member.MemberFrontController;
 import com.app.post.controller.PostDeleteOkController;
 import com.app.post.controller.PostListController;
 import com.app.post.controller.PostReadController;
@@ -26,7 +27,6 @@ public class PostFrontController extends HttpServlet {
 //		System.out.println("경로 타겟");
 //		System.out.println(target);
 		Result result = null;
-		
 		if(target.equals("write")) {
 			result = new PostWriteController().excute(req, resp);
 		} else if(target.equals("write-ok")) {

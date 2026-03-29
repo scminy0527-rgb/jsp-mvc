@@ -20,4 +20,9 @@
 		FROM TBL_MEMBER
 		WHERE ID = #{id}
 	</select>
+	
+	<insert id="join" parameterType="MemberVO">
+		INSERT INTO TBL_MEMBER
+		VALUES (SEQ_MEMBER.NEXTVAL, #{memberEmail}, #{memberPassword}, #{memberName})
+	</insert>
 </mapper>

@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.ibatis.reflection.SystemMetaObject;
 
 import com.app.Result;
+import com.app.member.controller.MemberJoinController;
+import com.app.member.controller.MemberJoinOkController;
+import com.app.member.controller.MemberLoginController;
 import com.app.member.controller.MemberLoginOkController;
 import com.app.member.controller.MemberMyPageController;
 
@@ -26,13 +29,15 @@ public class MemberFrontController extends HttpServlet {
 //		System.out.println(target);
 		
 		if(target.equals("login")) {
-			
+			result = new MemberLoginController().excute(req, resp);
 		}else if(target.equals("login-ok")) {
 			result = new MemberLoginOkController().excute(req, resp);
 		}else if(target.equals("my-page")) {
 			result = new MemberMyPageController().excute(req, resp);
-		}else if(target.equals("temp")) {
-		}else if(target.equals("temp")) {
+		}else if(target.equals("join")) {
+			result = new MemberJoinController().excute(req, resp);
+		}else if(target.equals("join-ok")) {
+			result = new MemberJoinOkController().excute(req, resp);
 		}else if(target.equals("temp")) {
 		}else if(target.equals("temp")) {
 		}else if(target.equals("temp")) {

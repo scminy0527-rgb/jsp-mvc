@@ -27,4 +27,8 @@ public class MemberDAO {
 		MemberVO member = sqlSession.selectOne("member.selectById", id);
 		return Optional.ofNullable(member);
 	}
+	
+	public void join(MemberVO memberVO) {
+		sqlSession.insert("member.join", memberVO);
+	}
 }
