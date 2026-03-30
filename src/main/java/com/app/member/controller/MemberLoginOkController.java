@@ -6,6 +6,7 @@ import java.util.Optional;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
@@ -19,6 +20,7 @@ public class MemberLoginOkController implements Action {
 		Result result = new Result();
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
+		HttpSession session = req.getSession();
 		
 		String memberEmail = req.getParameter("memberEmail");
 		System.out.println("멤버 이메일: " + memberEmail);
@@ -48,6 +50,8 @@ public class MemberLoginOkController implements Action {
 //		req.setAttribute("member", foundMember.get());
 		result.setRedirect(true);
 		result.setPath("/mvc/my-page.member?id=" + foundMember.get().getId());
+		
+		session.setAttribute("memberEmail", memberEmail);
 		
 		return result;
 	}
